@@ -1,7 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { Cross, Heart, Play } from "./SVGs";
+import { Cross, Play } from "./SVGs";
+import config from "../config.json";
+import { VideoPlayButton } from "./VideoPlayButton";
 
 export type ChildInfo = {
   id: string;
@@ -10,12 +12,11 @@ export type ChildInfo = {
   age: string;
 };
 
-export const ChildModal: React.FC<
-  React.PropsWithChildren<{
-    onClose: () => void;
-    child: ChildInfo;
-  }>
-> = ({ onClose, child }) => {
+export const ChildModal: React.FC<{
+  onClose: () => void;
+  index: number;
+}> = ({ onClose, index }) => {
+  const { name, age, occupation, description } = config.children[index - 1];
   const video = React.useRef<HTMLVideoElement>(null);
   const [playedOnce, setPlayedOnce] = React.useState(false);
   const toggleVideo = () => {
@@ -29,36 +30,67 @@ export const ChildModal: React.FC<
     <div className="modal-bg" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-close-btn">
-          <Cross onClick={onClose} />
+          <img src="./cross.png" alt="close" onClick={onClose} />
         </div>
+        <img src={`./hand_written_texts/${index}w.png`} alt="" />
+        <p className="p2">
+          <div className="semi-bold">{name}</div>
+          {occupation}
+          <br />
+          <div className="semi-bold">Профессиональный стаж: </div>
+          {age} лет
+        </p>
         <div className="modal-video-wrapper">
           <video
             ref={video}
             className="modal-video"
             width="640"
             height="360"
-            src={`videos/${child.id}.mov`}
-            poster={`videos/${child.id}.png`}
+            src={`videos/${index}.mov`}
+            poster={`videos/${index}.png`}
             controls={playedOnce}
           >
             Ваш браузер не поддерживает тег video.
           </video>
           {!playedOnce && (
-            <button className="modal-video-play-button" onClick={toggleVideo}>
-              <Play />
-            </button>
+            <VideoPlayButton
+              onClick={toggleVideo}
+              className="modal-video-play-button"
+            />
           )}
         </div>
-        <div className="modal-text">
-          <p>{child.text}</p>
+        <div className="modal-text">{description}</div>
+      </div>
 
-          <p className="modal-text-name">
-            {child.name}, {child.age}
-          </p>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
+        <img src={`./hand_written_texts/${index}w.png`} alt="" />
+        <p className="p2">
+          <div className="semi-bold">{name}</div>
+          {occupation}
+          <br />
+          <div className="semi-bold">Профессиональный стаж: </div>
+          {age} лет
+        </p>
+        <div className="modal-video-wrapper">
+          <video
+            ref={video}
+            className="modal-video"
+            width="640"
+            height="360"
+            src={`videos/${index}.mov`}
+            poster={`videos/${index}.png`}
+            controls={playedOnce}
+          >
+            Ваш браузер не поддерживает тег video.
+          </video>
+          {!playedOnce && (
+            <VideoPlayButton
+              onClick={toggleVideo}
+              className="modal-video-play-button"
+            />
+          )}
         </div>
-        <div className="modal-heart">
-          <Heart />
-        </div>
+        <div className="modal-text">{description}</div>
       </div>
     </div>
   );

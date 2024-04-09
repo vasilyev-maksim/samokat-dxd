@@ -7,17 +7,17 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 export const Promocode: React.FC<{ code: string }> = ({ code }) => {
   const [copied, setCopied] = React.useState(false);
   return (
-    <div className="promocode">
-      <CopyToClipboard text={code} onCopy={() => setCopied(true)}>
+    <CopyToClipboard text={code} onCopy={() => setCopied(true)}>
+      <div className="promocode">
         <div className="promocode-body">
-          {code}
+          <span>{code}</span>
           {copied ? (
             <img src={"./copied.png"} alt="copied" />
           ) : (
             <img src={"./copy.png"} alt="copy" />
           )}
         </div>
-      </CopyToClipboard>
-    </div>
+      </div>
+    </CopyToClipboard>
   );
 };
