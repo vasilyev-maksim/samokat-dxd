@@ -16,16 +16,26 @@ export default function Home() {
     <>
       <Script src="/analytics.js" />
       <main className="">
-        <img alt="bg" id="bg" />
-        <img src="./right-hand.svg" id="right-hand" />
-        <img src="./left-hand.svg" id="left-hand" />
         <div className="site-header flex-centered">
-          <HeaderLogoPill />
+          <img alt="logo" src="./logo.svg" />
         </div>
+
+        <div className="flex-centered">
+          <img alt="children" src="./children__m.png" />
+        </div>
+
+        <p style={{}}>
+          Детям часто бывает непросто со своими взрослыми и это нормально!
+          Самокат и «Достаточно хорошие родители» сделали проект, который
+          поможет родителям и детям чуть лучше понимать друг друга.  Мы
+          попросили главных экспертов детства рассказать о своих увлечениях и
+          дать несколько советов взрослым. Их ответы помогут вашему
+          игрательному, бегательному, прыгательному и хохотательному развитию
+        </p>
 
         {/* <div className="zaglushka" /> */}
 
-        <Section id="1">
+        {/* <Section id="1">
           <Paragraph
             className="greeting"
             title={{
@@ -144,7 +154,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </Section>
+        </Section> */}
       </main>
       <Section id="8">
         <footer>

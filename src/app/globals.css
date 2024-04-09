@@ -17,10 +17,10 @@ main {
   overflow: hidden;
 }
 
-#bg {
+/* #bg {
   width: 100%;
   content: url("./mobile_bg.svg");
-}
+} */
 
 @keyframes slideInFromLeft {
   0% {
@@ -83,9 +83,9 @@ main {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
   font-weight: 400;
-  background-color: #e2a49b;
+  /* background-color: #e2a49b; */
   animation: fadeIn 1s ease-in-out forwards;
   overflow-x: hidden;
 }
@@ -96,7 +96,7 @@ body {
   }
 
   #bg {
-    content: url("./desktop_bg.svg");
+    /* content: url("./desktop_bg.svg"); */
     transform: scale(1.5) translateY(16.66%);
   }
 
@@ -142,11 +142,7 @@ body {
 }
 
 .site-header {
-  padding-top: 5.581vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  padding-top: 24px;
 }
 
 .flex-centered {
