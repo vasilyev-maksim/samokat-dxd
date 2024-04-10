@@ -20,8 +20,9 @@ export const metadata: Metadata = {
   description: "Поддержите подопечных фонда и получите подарок от Самоката",
   openGraph: {
     images: ["./opengraph.png"],
-    title: "TODO TITLE",
-    description: "TODO DESCRIPTION",
+    title: "Эксперты детства",
+    description:
+      "Самокат и «Достаточно хорошие родители» делятся советами о воспитании родителей",
   },
 };
 
