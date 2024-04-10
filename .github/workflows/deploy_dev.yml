@@ -20,5 +20,5 @@ jobs:
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
           SSH_KEY_PATH: ${{ github.workspace }}/.ssh/id_rsa
       - name: Run deploy script
-        run: ssh -p 31328 root@81.163.22.69 /root/scripts/deploy_front.sh -v fond.groznov.co
+        run: ssh -p 31328 root@81.163.22.69 /root/scripts/deploy_front.sh -v childexpert.groznov.co
 
