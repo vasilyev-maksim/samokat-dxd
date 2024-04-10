@@ -490,26 +490,31 @@ footer {
   background: #fff;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 16px;
-  margin: 0 8px 24px;
+  margin: 8px;
   pointer-events: auto;
+  font-size: 14px;
+  text-align: center;
 }
 
 .cookies-toast a {
-  text-decoration: underline;
+  color: rgba(255, 51, 95, 1);
 }
 
 .cookies-toast p {
-  font-size: 12px;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 17px;
 }
 
 .cookies-toast button {
-  width: 100%;
+  width: 85%;
   display: flex;
-  padding: 12px 36px;
+  margin: 0 auto;
+  padding: 15px 32px;
   justify-content: center;
   align-items: center;
-  border-radius: 40px;
-  background: #ff335f;
+  border-radius: 100px;
+  background: rgba(255, 51, 95, 1);
   color: white;
   font-size: 16px;
   font-weight: 500;

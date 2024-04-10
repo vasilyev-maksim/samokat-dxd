@@ -7,8 +7,10 @@ export const CookiesToast: React.FC = () => {
   return open ? (
     <div className="cookies-toast">
       <p>
-        На этом сайте мы используем cookie, чтобы всё работало как надо,
-        а&nbsp;аналитика сайта соответствовала{" "}
+        На этом сайте мы используем cookie, <br />
+        чтобы всё работало как надо,
+        <br />
+        а&nbsp;аналитика сайта соответствовала <br />
         <a href="https://samokat.ru/privacy" target="_blank">
           Политике конфиденциальности
         </a>

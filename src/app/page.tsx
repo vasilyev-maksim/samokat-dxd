@@ -1,10 +1,9 @@
 import Script from "next/script";
 import { ChildSection } from "./components/ChildSection";
-import { Play } from "./components/SVGs";
-import { VideoPlayButton } from "./components/VideoPlayButton";
 import { SetsSlider } from "./components/SetsSlider";
 import { Promocode } from "./components/Promocode";
 import { Button } from "./components/Button";
+import { CookiesToast } from "./components/CookiesToast";
 
 export default function Home() {
   return (
@@ -131,6 +130,9 @@ export default function Home() {
             ®
           </div>
         </footer>
+        <div className="bottom-sticked-block">
+          <CookiesToast />
+        </div>
       </main>
     </>
   );
