@@ -59,8 +59,6 @@ export const ChildModal: React.FC<{
           <video
             ref={video}
             className="modal-video"
-            width="100px"
-            height="1000px"
             src={`./videos/${index}.mp4`}
             poster={`photos/${index}f.png`}
             controls={playedOnce}
