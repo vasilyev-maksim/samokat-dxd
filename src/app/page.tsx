@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <>
       <Script src="/analytics.js" />
+      <Script src="https://player.vimeo.com/api/player.js" />
       <main>
         <div className="site-header flex-centered">
           <img alt="logo" src="./logo.svg" />

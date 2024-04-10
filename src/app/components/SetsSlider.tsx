@@ -7,5 +7,5 @@ export function SetsSlider() {
     name: x.name,
     img: `./sets/${i + 1}.png`,
   }));
-  return <Slider items={items} />;
+  return <Slider items={items} className="sets-slider" />;
 }

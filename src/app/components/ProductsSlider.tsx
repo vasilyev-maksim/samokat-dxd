@@ -8,5 +8,5 @@ export function ProductsSlider(props: { setIndex: number }) {
     name: x.name,
     img: `./products/${x.id}.jpeg`,
   }));
-  return <Slider items={items} />;
+  return <Slider className="products-slider" items={items} />;
 }

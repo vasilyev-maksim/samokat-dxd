@@ -170,19 +170,31 @@ footer {
   }
 }
 
-.sets-slider {
+.slider {
   display: flex;
   gap: 12px;
-  padding: 0 12px;
   overflow-x: auto;
 }
 
-.sets-item {
+.slider-item {
   cursor: pointer;
   min-width: 35%;
 
   img {
     width: 100%;
+  }
+}
+
+.sets-slider {
+  padding: 0 12px;
+}
+
+.products-slider {
+  font-size: 12px;
+  margin-bottom: 20px;
+
+  img {
+    border-radius: 8px;
   }
 }
 
@@ -200,8 +212,8 @@ footer {
 }
 
 .link-button-wrapper a {
-  font-size: 4.2vw !important;
-  padding: 4.883vw 10.46vw;
+  font-size: 16px;
+  padding: 15px;
 }
 
 .promoblock {
@@ -328,77 +340,6 @@ footer {
   }
 }
 
-.slider-item-wrapper {
-  display: flex;
-  /* width: 100%; */
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  /* margin: 10px; */
-}
-
-.slider-dots .slick-active button {
-  background-color: white;
-}
-
-.slider-dots {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  gap: 2.325vw;
-  margin-top: 5.5vw;
-}
-
-.slider-dots button {
-  color: transparent;
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 2.325vw;
-  height: 2.325vw;
-  border-radius: 100%;
-}
-
-.slider-item {
-  width: 91vw;
-  height: 618px;
-  border-radius: 30px;
-  background: #fff;
-  /* height: 100%; */
-  position: relative;
-  padding: 7vw;
-  /* padding: 37px; */
-  padding-top: 27px;
-  color: #383838;
-}
-
-.slider-item-stub {
-  width: 375px;
-}
-
-.slider-item-index {
-  background-color: #ff335f;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  color: white;
-  font-weight: 600;
-  font-size: 24px;
-}
-
-.slider-item-image {
-  width: 100%;
-  border-radius: 7vw;
-}
-
-.slider-item-header {
-  margin-top: 22px;
-  margin-bottom: 12px;
-  font-weight: 600;
-  font-size: 20px;
-}
-
 .promocode {
   cursor: pointer;
   margin: 25px auto 15px auto;
@@ -430,30 +371,6 @@ footer {
 }
 
 @media only screen and (min-width: 600px) {
-  .slider-item {
-    width: 375px;
-    padding: 27px 36px;
-  }
-
-  .slider-item-image {
-    border-radius: 30px;
-  }
-
-  .slider {
-    min-width: 1280px;
-    transform: translateX(-31.5%);
-  }
-
-  .slider-dots {
-    gap: 10px;
-    margin-top: 32px;
-  }
-
-  .slider-dots button {
-    width: 10px;
-    height: 10px;
-  }
-
   .promocode {
     margin: 30px auto;
     padding: 19px 20px;
@@ -484,6 +401,7 @@ footer {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
   gap: 10px;
+  padding: 10px;
 }
 
 .modal {
@@ -497,18 +415,30 @@ footer {
   position: relative;
   max-width: 95vw;
   position: relative;
-  top: 10px;
+  /* top: 10px; */
 
   .p2 {
     margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   &.child {
     padding-top: 50px;
+    padding-bottom: 25px;
   }
 
   &.set {
     padding-top: 20px;
+
+    p {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .link-button-wrapper {
+      width: 85%;
+      margin: 0 auto;
+    }
   }
 }
 

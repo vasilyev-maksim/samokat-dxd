@@ -5,11 +5,12 @@ export function Slider(props: {
     name: string;
     img: string;
   }[];
+  className?: string;
 }) {
   return (
-    <div className="sets-slider">
+    <div className={"slider " + props.className}>
       {props.items.map(({ name, img }, index) => (
-        <div className="sets-item" key={index}>
+        <div className="slider-item" key={index}>
           <img src={img} />
           <br />
           {name}
