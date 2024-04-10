@@ -5,18 +5,12 @@ import { Cross, Play } from "./SVGs";
 import config from "../config.json";
 import { VideoPlayButton } from "./VideoPlayButton";
 
-export type ChildInfo = {
-  id: string;
-  text: React.ReactNode;
-  name: string;
-  age: string;
-};
-
 export const ChildModal: React.FC<{
   onClose: () => void;
   index: number;
 }> = ({ onClose, index }) => {
-  const { name, age, occupation, description } = config.children[index - 1];
+  const child = config.children[index - 1];
+  const set = config.sets[index - 1];
   const video = React.useRef<HTMLVideoElement>(null);
   const [playedOnce, setPlayedOnce] = React.useState(false);
   const toggleVideo = () => {
@@ -28,17 +22,17 @@ export const ChildModal: React.FC<{
 
   return (
     <div className="modal-bg" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
+      <div className="modal child" onClick={(e) => e.stopPropagation()}>
         <div className="modal-close-btn">
           <img src="./cross.png" alt="close" onClick={onClose} />
         </div>
         <img src={`./hand_written_texts/${index}w.png`} alt="" />
         <p className="p2">
-          <div className="semi-bold">{name}</div>
-          {occupation}
+          <div className="semi-bold">{child.name}</div>
+          {child.occupation}
           <br />
           <div className="semi-bold">Профессиональный стаж: </div>
-          {age} лет
+          {child.age} лет
         </p>
         <div className="modal-video-wrapper">
           <video
@@ -59,18 +53,11 @@ export const ChildModal: React.FC<{
             />
           )}
         </div>
-        <div className="modal-text">{description}</div>
+        <div className="modal-text">{child.description}</div>
       </div>
 
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <img src={`./hand_written_texts/${index}w.png`} alt="" />
-        <p className="p2">
-          <div className="semi-bold">{name}</div>
-          {occupation}
-          <br />
-          <div className="semi-bold">Профессиональный стаж: </div>
-          {age} лет
-        </p>
+      <div className="modal set" onClick={(e) => e.stopPropagation()}>
+        <h2>{set.name}</h2>
         <div className="modal-video-wrapper">
           <video
             ref={video}
@@ -90,7 +77,7 @@ export const ChildModal: React.FC<{
             />
           )}
         </div>
-        <div className="modal-text">{description}</div>
+        <div className="modal-text">{child.description}</div>
       </div>
     </div>
   );
