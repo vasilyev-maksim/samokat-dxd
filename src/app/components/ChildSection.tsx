@@ -30,12 +30,9 @@ export function ChildSection(props: {
         onClick={openModal}
       >
         <div className="text">
-          <img
-            src={`./hand_written_texts/${props.index}.png`}
-            alt=""
-          />
+          <img src={`./hand_written_texts/${props.index}.png`} alt="" />
           <div className="expander" />
-          <div>
+          <div className="description">
             <div className="semi-bold">{props.name}</div>
             {props.occupation}
           </div>

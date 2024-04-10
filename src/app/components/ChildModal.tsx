@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import config from "../config.json";
-// import { VideoPlayButton } from "./VideoPlayButton";
 import { ProductsSlider } from "./ProductsSlider";
 import { Button } from "./Button";
 import { VideoPlayButton } from "./VideoPlayButton";
@@ -57,12 +56,11 @@ export const ChildModal: React.FC<{
               allowFullScreen
             ></iframe>
           </div> */}
-
           <video
             ref={video}
             className="modal-video"
-            width="640"
-            height="360"
+            width="100px"
+            height="1000px"
             src={`./videos/${index}.mp4`}
             poster={`photos/${index}f.png`}
             controls={playedOnce}

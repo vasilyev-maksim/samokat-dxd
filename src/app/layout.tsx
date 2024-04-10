@@ -8,8 +8,10 @@ const myFont = localFont({
   // src: "./Euclid Circular A Regular.ttf"
   src: [
     { path: "/fonts/Euclid Circular A Light.ttf", weight: "400" },
-    { path: "/fonts/Euclid Circular A Regular.ttf", weight: "500" },
-    { path: "/fonts/Euclid Circular A SemiBold.ttf", weight: "600" },
+    // { path: "/fonts/Euclid Circular A Regular.ttf", weight: "400" },
+    { path: "/fonts/Euclid Circular A SemiBold.ttf", weight: "500" },
+    // { path: "/fonts/Euclid Circular A Medium.ttf", weight: "500" },
+    // { path: "/fonts/Euclid Circular A Bold.ttf", weight: "500" },
   ],
 });
 

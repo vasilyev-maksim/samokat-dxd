@@ -4,6 +4,7 @@ import { SetsSlider } from "./components/SetsSlider";
 import { Promocode } from "./components/Promocode";
 import { Button } from "./components/Button";
 import { CookiesToast } from "./components/CookiesToast";
+import { Br } from "./components/Br";
 
 export default function Home() {
   return (
@@ -15,12 +16,12 @@ export default function Home() {
           <img alt="logo" src="./logo.svg" />
         </div>
         <div id="section-0">
-          <img alt="children" src="./children__m.png" />
+          <img alt="children" />
         </div>
         <div id="section-1">
           Детям иногда бывает непросто со своими взрослыми. И это нормально!
-          <br />
-          <br />
+          <Br for="mobile" />
+          <Br for="mobile" />
           Самокат и «Достаточно хорошие родители» сделали проект, который
           поможет родителям и детям чуть лучше понимать друг друга.
           <br />
