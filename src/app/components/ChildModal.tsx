@@ -5,6 +5,7 @@ import config from "../config.json";
 // import { VideoPlayButton } from "./VideoPlayButton";
 import { ProductsSlider } from "./ProductsSlider";
 import { Button } from "./Button";
+import { VideoPlayButton } from "./VideoPlayButton";
 
 function decapitalize(str: string) {
   return str.charAt(0).toLowerCase() + str.slice(1);
@@ -16,14 +17,14 @@ export const ChildModal: React.FC<{
 }> = ({ onClose, index }) => {
   const child = config.children[index - 1];
   const set = config.sets[index - 1];
-  // const video = React.useRef<HTMLVideoElement>(null);
-  // const [playedOnce, setPlayedOnce] = React.useState(false);
-  // const toggleVideo = () => {
-  //   if (video.current?.paused) {
-  //     video.current.play();
-  //     setPlayedOnce(true);
-  //   }
-  // };
+  const video = React.useRef<HTMLVideoElement>(null);
+  const [playedOnce, setPlayedOnce] = React.useState(false);
+  const toggleVideo = () => {
+    if (video.current?.paused) {
+      video.current.play();
+      setPlayedOnce(true);
+    }
+  };
 
   return (
     <div className="modal-bg" onClick={onClose}>
@@ -40,7 +41,7 @@ export const ChildModal: React.FC<{
           {child.age} лет
         </div>
         <div className="modal-video-wrapper">
-          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+          {/* <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
             <iframe
               src={`https://player.vimeo.com/video/${child.vimeoVideoId}?h=66f4c80b79&title=0&byline=0&portrait=0`}
               style={{
@@ -55,15 +56,15 @@ export const ChildModal: React.FC<{
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
-          {/*           
+          </div> */}
+
           <video
             ref={video}
             className="modal-video"
             width="640"
             height="360"
-            src={child.video}
-            // poster={`videos/${index}.png`}
+            src={`./videos/${index}.mp4`}
+            poster={`photos/${index}f.png`}
             controls={playedOnce}
           >
             Ваш браузер не поддерживает тег video.
@@ -73,7 +74,7 @@ export const ChildModal: React.FC<{
               onClick={toggleVideo}
               className="modal-video-play-button"
             />
-          )} */}
+          )}
         </div>
         <div className="modal-text">{child.description}</div>
       </div>
