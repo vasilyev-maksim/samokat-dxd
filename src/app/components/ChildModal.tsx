@@ -83,7 +83,7 @@ export const ChildModal: React.FC<{
 
         <ProductsSlider setIndex={index - 1} />
 
-        <Button label={set.button} href="" />
+        <Button label={set.button} />
       </div>
     </div>
   );

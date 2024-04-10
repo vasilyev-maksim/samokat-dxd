@@ -97,7 +97,7 @@ export default function Home() {
           </p>
 
           <br />
-          <Button label="Выбрать набор" href={""} />
+          <Button label="Выбрать набор" />
         </div>
 
         <footer>

@@ -18,6 +18,11 @@ const myFont = localFont({
 export const metadata: Metadata = {
   title: "Помогаем вместе",
   description: "Поддержите подопечных фонда и получите подарок от Самоката",
+  openGraph: {
+    images: ["./opengraph.png"],
+    title: "TODO TITLE",
+    description: "TODO DESCRIPTION",
+  },
 };
 
 export default function RootLayout({
