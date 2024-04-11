@@ -2,7 +2,6 @@ import Script from "next/script";
 import { ChildSection } from "./components/ChildSection";
 import { SetsSlider } from "./components/SetsSlider";
 import { Promocode } from "./components/Promocode";
-import { Button } from "./components/Button";
 import { CookiesToast } from "./components/CookiesToast";
 import { Br } from "./components/Br";
 import { url } from "./utils";
@@ -26,7 +25,7 @@ export default function Home() {
         </div>
         <div id="section-1">
           Детям иногда бывает непросто со&nbsp;своими взрослыми. И&nbsp;это
-          нормально!
+          нормально!&nbsp;
           <Br for="mobile" />
           <Br for="mobile" />
           Самокат и&nbsp;&laquo;Достаточно хорошие родители&raquo; сделали
@@ -44,7 +43,7 @@ export default function Home() {
 
           <p className="p">
             Смотрите интервью экспертов, чтобы научиться жить со&nbsp;взрослыми.
-            А ещё чтобы узнать, как найти вдохновение
+            А ещё чтобы узнать, как найти вдохновение&nbsp;
             и&nbsp;любопытство&nbsp;&mdash; если они где-то потерялись.
           </p>
 
@@ -102,8 +101,8 @@ export default function Home() {
           <Promocode code="ДЕТСТВО" />
 
           <p className="text-center red weight-500 size-16">
-            Даёт скидку&nbsp;15% при заказе от&nbsp;1000&nbsp;₽&nbsp;&mdash;
-            <br /> на&nbsp;товары бренда Самокат
+            Даёт скидку&nbsp;15% на&nbsp;товары бренда Самокат при заказе
+            от&nbsp;1000&nbsp;₽
           </p>
 
           <br />
@@ -129,7 +128,7 @@ export default function Home() {
             .
             <br />
             <br />
-            Психологи и&nbsp;Психотерапевты не&nbsp;оказывают медицинских услуг
+            Психологи и&nbsp;психотерапевты не&nbsp;оказывают медицинских услуг
             в&nbsp;сервисе &laquo;Достаточно хорошие родители&raquo;.
           </p>
           <div className="made-by">

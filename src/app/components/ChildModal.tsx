@@ -35,7 +35,7 @@ export const ChildModal: React.FC<{
         <img src={url(`./hand_written_texts/${index}w.png`)} alt="" />
         <div className="p2">
           <div className="semi-bold">{child.name}</div>
-          {child.occupation}
+          <div dangerouslySetInnerHTML={{ __html: child.occupation }} />
           <br />
           <div className="semi-bold">Профессиональный стаж: </div>
           {child.age} лет
@@ -73,12 +73,15 @@ export const ChildModal: React.FC<{
             />
           )}
         </div>
-        <div className="modal-text">{child.description}</div>
+        <div
+          className="modal-text"
+          dangerouslySetInnerHTML={{ __html: child.description }}
+        />
       </div>
 
       <div className="modal set" onClick={(e) => e.stopPropagation()}>
-        <h2>Набор для {decapitalize(set.name)}</h2>
-        <p>{set.description}</p>
+        <h2>Набор {decapitalize(set.name)}</h2>
+        <p dangerouslySetInnerHTML={{ __html: set.description }} />
 
         <ProductsSlider setIndex={index - 1} />
 
