@@ -5,13 +5,13 @@ import { Promocode } from "./components/Promocode";
 import { Button } from "./components/Button";
 import { CookiesToast } from "./components/CookiesToast";
 import { Br } from "./components/Br";
-import { sendEvent, url } from "./utils";
+import { url } from "./utils";
 import { ChooseSetButton } from "./components/ChooseSetButton";
 
 export default function Home() {
   return (
     <>
-      <Script src="/analytics.js" />
+      <Script src={url("/analytics.js")} />
       <Script src="https://player.vimeo.com/api/player.js" />
       <main>
         <div className="site-header flex-centered">
