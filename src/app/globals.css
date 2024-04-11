@@ -602,6 +602,8 @@ footer {
     max-width: 900px;
     margin: 0 auto;
     margin-bottom: 15px;
+    text-align: left;
+    padding: 16px 30px;
   }
 
   button {
@@ -622,7 +624,6 @@ footer {
     @media (min-width: 600px) {
       max-width: 150px;
       margin: 0;
-      margin-right: 10px;
     }
   }
 
