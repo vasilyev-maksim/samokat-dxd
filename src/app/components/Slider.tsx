@@ -14,7 +14,7 @@ export function Slider(props: {
         <div className="slider-item" key={index}>
           <img src={url(img)} />
           <br />
-          {name}
+          <div dangerouslySetInnerHTML={{ __html: name }} />
         </div>
       ))}
     </div>

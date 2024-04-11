@@ -17,8 +17,8 @@ const myFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Помогаем вместе",
-  description: "Поддержите подопечных фонда и получите подарок от Самоката",
+  title: "Эксперты детства",
+  // description: "Поддержите подопечных фонда и получите подарок от Самоката",
   openGraph: {
     images: [url("./opengraph.png")],
     title: "Эксперты детства",
