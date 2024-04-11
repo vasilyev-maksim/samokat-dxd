@@ -15,8 +15,8 @@ export const ChildModal: React.FC<{
   onClose: () => void;
   index: number;
 }> = ({ onClose, index }) => {
-  const child = config.children[index - 1];
-  const set = config.sets[index - 1];
+  const child = config.children[index];
+  const set = config.sets[index];
   const video = React.useRef<HTMLVideoElement>(null);
   const [playedOnce, setPlayedOnce] = React.useState(false);
   const toggleVideo = () => {
@@ -32,7 +32,7 @@ export const ChildModal: React.FC<{
         <div className="modal-close-btn">
           <img src={url("./cross.png")} alt="close" onClick={onClose} />
         </div>
-        <img src={url(`./hand_written_texts/${index}w.png`)} alt="" />
+        <img src={url(`./hand_written_texts/${index + 1}w.png`)} alt="" />
         <div className="p2">
           <div className="semi-bold">{child.name}</div>
           <div dangerouslySetInnerHTML={{ __html: child.occupation }} />
@@ -60,8 +60,8 @@ export const ChildModal: React.FC<{
           <video
             ref={video}
             className="modal-video"
-            src={`./videos/${index}.mp4`}
-            poster={`photos/${index}f.png`}
+            src={`./videos/${index + 1}.mp4`}
+            poster={`photos/${index + 1}f.png`}
             controls={playedOnce}
           >
             Ваш браузер не поддерживает тег video.
@@ -83,7 +83,7 @@ export const ChildModal: React.FC<{
         <h2>Набор {decapitalize(set.name)}</h2>
         <p dangerouslySetInnerHTML={{ __html: set.description }} />
 
-        <ProductsSlider setIndex={index - 1} />
+        <ProductsSlider setIndex={index} />
 
         <Button label={set.button} onClick={() => sendEvent(set.eventKey)} />
       </div>

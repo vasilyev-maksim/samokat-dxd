@@ -585,6 +585,7 @@ footer {
 .expander {
   flex-grow: 1;
 }
+
 .cookies-toast {
   border-radius: 24px;
   background: #fff;
@@ -594,32 +595,46 @@ footer {
   pointer-events: auto;
   font-size: 14px;
   text-align: center;
-}
 
-.cookies-toast a {
-  color: rgba(255, 51, 95, 1);
-}
+  @media (min-width: 600px) {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
 
-.cookies-toast p {
-  width: 80%;
-  margin: 0 auto;
-  line-height: 17px;
-}
+  button {
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+    padding: 15px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: rgba(255, 51, 95, 1);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 16px;
 
-.cookies-toast button {
-  width: 85%;
-  display: flex;
-  margin: 0 auto;
-  padding: 15px 32px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  background: rgba(255, 51, 95, 1);
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  margin-top: 16px;
+    @media (min-width: 600px) {
+      max-width: 150px;
+      margin: 0;
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    color: rgba(255, 51, 95, 1);
+  }
+
+  p {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 17px;
+  }
 }
 
 .bottom-sticked-block {
@@ -629,15 +644,6 @@ footer {
   right: 0;
   width: 100%;
   pointer-events: none;
-}
-
-.bottom-sticked-block .my-cookies-block {
-  display: flex;
-  justify-content: flex-end;
-}
-.bottom-sticked-block .help-button-block {
-  display: flex;
-  justify-content: flex-end;
 }
 
 /* @media only screen and (min-width: 600px) {
