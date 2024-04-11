@@ -1,4 +1,5 @@
 import * as React from "react";
+import { url } from "../utils";
 
 export function VideoPlayButton(props: {
   className?: string;
@@ -9,7 +10,7 @@ export function VideoPlayButton(props: {
       onClick={props.onClick}
       className={"video-play-button " + props.className}
     >
-      <img src="./play.svg" alt="play" className="play" />
+      <img src={url("./play.svg")} alt="play" className="play" />
     </button>
   );
 }

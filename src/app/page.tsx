@@ -5,6 +5,7 @@ import { Promocode } from "./components/Promocode";
 import { Button } from "./components/Button";
 import { CookiesToast } from "./components/CookiesToast";
 import { Br } from "./components/Br";
+import { url } from "./utils";
 
 export default function Home() {
   return (
@@ -13,10 +14,19 @@ export default function Home() {
       <Script src="https://player.vimeo.com/api/player.js" />
       <main>
         <div className="site-header flex-centered">
-          <img alt="logo" src="./logo.svg" />
+          <img alt="logo" src={url("./logo.svg")} />
         </div>
         <div id="section-0">
-          <img alt="children" />
+          <img
+            alt={"children"}
+            src={url("./children__m.png")}
+            className="mobile-only"
+          />
+          <img
+            alt={"children"}
+            src={url("./children__d.png")}
+            className="desktop-only"
+          />
         </div>
         <div id="section-1">
           Детям иногда бывает непросто со своими взрослыми. И это нормально!

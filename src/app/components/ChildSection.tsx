@@ -3,6 +3,7 @@
 import * as React from "react";
 import { VideoPlayButton } from "./VideoPlayButton";
 import { ChildModal } from "./ChildModal";
+import { url } from "../utils";
 
 export function ChildSection(props: {
   name: string;
@@ -30,7 +31,7 @@ export function ChildSection(props: {
         onClick={openModal}
       >
         <div className="text">
-          <img src={`./hand_written_texts/${props.index}.png`} alt="" />
+          <img src={url(`./hand_written_texts/${props.index}.png`)}  alt="" />
           <div className="expander" />
           <div className="description">
             <div className="semi-bold">{props.name}</div>
@@ -38,7 +39,7 @@ export function ChildSection(props: {
           </div>
         </div>
         <div className="photo-wrapper">
-          <img className="photo" src={`./photos/${props.index}.png`} alt="" />
+          <img className="photo" src={url(`./photos/${props.index}.png`)} alt="" />
           <VideoPlayButton />
         </div>
       </div>

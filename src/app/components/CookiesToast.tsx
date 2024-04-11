@@ -3,7 +3,20 @@
 import * as React from "react";
 
 export const CookiesToast: React.FC = () => {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState<boolean | null>(null);
+
+  React.useEffect(() => {
+    if (localStorage.getItem("cookies") !== "1") {
+      setOpen(true);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    if (open === false) {
+      localStorage.setItem("cookies", "1");
+    }
+  }, [open]);
+
   return open ? (
     <div className="cookies-toast">
       <p>
@@ -16,7 +29,13 @@ export const CookiesToast: React.FC = () => {
         </a>
         .
       </p>
-      <button onClick={() => setOpen(false)}>OK</button>
+      <button
+        onClick={() => {
+          setOpen(false);
+        }}
+      >
+        OK
+      </button>
     </div>
   ) : null;
 };

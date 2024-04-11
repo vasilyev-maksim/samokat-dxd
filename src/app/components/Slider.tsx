@@ -1,4 +1,5 @@
 import * as React from "react";
+import { url } from "../utils";
 
 export function Slider(props: {
   items: {
@@ -11,7 +12,7 @@ export function Slider(props: {
     <div className={"slider " + props.className}>
       {props.items.map(({ name, img }, index) => (
         <div className="slider-item" key={index}>
-          <img src={img} />
+          <img src={url(img)} />
           <br />
           {name}
         </div>

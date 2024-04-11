@@ -3,6 +3,7 @@
 import * as React from "react";
 
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { url } from "../utils";
 
 export const Promocode: React.FC<{ code: string }> = ({ code }) => {
   const [copied, setCopied] = React.useState(false);
@@ -12,9 +13,9 @@ export const Promocode: React.FC<{ code: string }> = ({ code }) => {
         <div className="promocode-body">
           <span>{code}</span>
           {copied ? (
-            <img src={"./copied.png"} alt="copied" />
+            <img src={url("./copied.png")} alt="copied" />
           ) : (
-            <img src={"./copy.png"} alt="copy" />
+            <img src={url("./copy.png")} alt="copy" />
           )}
         </div>
       </div>

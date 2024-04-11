@@ -5,6 +5,7 @@ import config from "../config.json";
 import { ProductsSlider } from "./ProductsSlider";
 import { Button } from "./Button";
 import { VideoPlayButton } from "./VideoPlayButton";
+import { url } from "../utils";
 
 function decapitalize(str: string) {
   return str.charAt(0).toLowerCase() + str.slice(1);
@@ -29,9 +30,9 @@ export const ChildModal: React.FC<{
     <div className="modal-bg" onClick={onClose}>
       <div className="modal child" onClick={(e) => e.stopPropagation()}>
         <div className="modal-close-btn">
-          <img src="./cross.png" alt="close" onClick={onClose} />
+          <img src={url("./cross.png")} alt="close" onClick={onClose} />
         </div>
-        <img src={`./hand_written_texts/${index}w.png`} alt="" />
+        <img src={url(`./hand_written_texts/${index}w.png`)} alt="" />
         <div className="p2">
           <div className="semi-bold">{child.name}</div>
           {child.occupation}
