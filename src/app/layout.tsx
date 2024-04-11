@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./normalize.css";
 import "./globals.css";
+import { url } from "./utils";
 
 // Font files can be colocated inside of `pages`
 const myFont = localFont({
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: "Помогаем вместе",
   description: "Поддержите подопечных фонда и получите подарок от Самоката",
   openGraph: {
-    images: ["./opengraph.png"],
+    images: [url("./opengraph.png")],
     title: "Эксперты детства",
     description:
       "Самокат и «Достаточно хорошие родители» делятся советами о воспитании родителей",
