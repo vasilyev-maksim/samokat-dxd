@@ -6,6 +6,6 @@ import { sendEvent } from "../utils";
 
 export function ChooseSetButton() {
   return (
-    <Button label="Выбрать набор" onClick={() => sendEvent("choose_set")} />
+    <Button className="choose-set-button" label="Выбрать набор" onClick={() => sendEvent("choose_set")} />
   );
 }
