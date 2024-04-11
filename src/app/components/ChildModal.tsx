@@ -5,7 +5,7 @@ import config from "../config.json";
 import { ProductsSlider } from "./ProductsSlider";
 import { Button } from "./Button";
 import { VideoPlayButton } from "./VideoPlayButton";
-import { url } from "../utils";
+import { sendEvent, url } from "../utils";
 
 function decapitalize(str: string) {
   return str.charAt(0).toLowerCase() + str.slice(1);
@@ -82,7 +82,7 @@ export const ChildModal: React.FC<{
 
         <ProductsSlider setIndex={index - 1} />
 
-        <Button label={set.button} />
+        <Button label={set.button} onClick={() => sendEvent(set.eventKey)} />
       </div>
     </div>
   );

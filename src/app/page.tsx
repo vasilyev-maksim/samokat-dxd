@@ -5,7 +5,8 @@ import { Promocode } from "./components/Promocode";
 import { Button } from "./components/Button";
 import { CookiesToast } from "./components/CookiesToast";
 import { Br } from "./components/Br";
-import { url } from "./utils";
+import { sendEvent, url } from "./utils";
+import { ChooseSetButton } from "./components/ChooseSetButton";
 
 export default function Home() {
   return (
@@ -21,11 +22,6 @@ export default function Home() {
             alt={"children"}
             src={url("./children__m.png")}
             className="mobile-only"
-          />
-          <img
-            alt={"children"}
-            src={url("./children__d.png")}
-            className="desktop-only"
           />
         </div>
         <div id="section-1">
@@ -111,7 +107,7 @@ export default function Home() {
           </p>
 
           <br />
-          <Button label="Выбрать набор" />
+          <ChooseSetButton />
         </div>
 
         <footer>

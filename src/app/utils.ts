@@ -5,3 +5,9 @@ export function url(str: string) {
       : "") + str.replace(/^\./, "")
   );
 }
+
+export function sendEvent(key: string) {
+  (window as any).exponea?.track?.("childexpert_smkt", {
+    event_action: key,
+  });
+}

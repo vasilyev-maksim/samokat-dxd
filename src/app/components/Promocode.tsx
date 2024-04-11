@@ -3,12 +3,18 @@
 import * as React from "react";
 
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { url } from "../utils";
+import { sendEvent, url } from "../utils";
 
 export const Promocode: React.FC<{ code: string }> = ({ code }) => {
   const [copied, setCopied] = React.useState(false);
   return (
-    <CopyToClipboard text={code} onCopy={() => setCopied(true)}>
+    <CopyToClipboard
+      text={code}
+      onCopy={() => {
+        setCopied(true);
+        sendEvent("copy_promocode");
+      }}
+    >
       <div className="promocode">
         <div className="promocode-body">
           <span>{code}</span>
