@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const isProd = false;process.env.SERVER === "production";
+const isProd = process.env.SERVER === "production";
 
 module.exports = {
   output: "export",

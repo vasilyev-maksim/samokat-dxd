@@ -18,7 +18,7 @@ export default function Home() {
           <img alt="logo" src={url("./logo.svg")} />
         </div>
         <div id="section-0">
-          <img alt={"children"} src={url("./children__m.png")} />
+          <img alt={"children"} />
         </div>
         <div id="section-1">
           Детям иногда бывает непросто со&nbsp;своими взрослыми. И&nbsp;это
