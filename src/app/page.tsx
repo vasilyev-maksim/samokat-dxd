@@ -6,6 +6,7 @@ import { CookiesToast } from "./components/CookiesToast";
 import { Br } from "./components/Br";
 import { url } from "./utils";
 import { ChooseSetButton } from "./components/ChooseSetButton";
+import config from "./config.json";
 
 export default function Home() {
   return (
@@ -17,11 +18,7 @@ export default function Home() {
           <img alt="logo" src={url("./logo.svg")} />
         </div>
         <div id="section-0">
-          <img
-            alt={"children"}
-            src={url("./children__m.png")}
-            className="mobile-only"
-          />
+          <img alt={"children"} src={url("./children__m.png")} />
         </div>
         <div id="section-1">
           Детям иногда бывает непросто со&nbsp;своими взрослыми. И&nbsp;это
@@ -50,46 +47,15 @@ export default function Home() {
             и&nbsp;любопытство&nbsp;&mdash; если они где-то потерялись.
           </p>
 
-          <ChildSection
-            name={"Василиса"}
-            occupation={
-              <>
-                специалист <br /> по&nbsp;долгоигранию
-              </>
-            }
-            index={1}
-          />
-
-          <ChildSection
-            name={"Оливер"}
-            occupation={"кулинарный критик"}
-            index={2}
-          />
-          <ChildSection
-            name={"Матвей"}
-            occupation={
-              <>
-                специалист <br />
-                по&nbsp;бегательному развитию
-              </>
-            }
-            index={3}
-          />
-          <ChildSection
-            name={"Захар"}
-            occupation={"эксперт по всем вопросам"}
-            index={4}
-          />
-          <ChildSection
-            name={"Агата"}
-            occupation={"ценитель высокого искусства"}
-            index={5}
-          />
+          {config.children.map((_, i) => (
+            <ChildSection key={i} index={i} />
+          ))}
         </div>
 
         <div id="section-3">
           <h2>
-            Что пригодится, пока <br /> занимаетесь любимым делом
+            Что пригодится, пока занимаетесь <Br for="desktop" />
+            любимым&nbsp;делом
           </h2>
           <br />
           <SetsSlider />
@@ -97,19 +63,24 @@ export default function Home() {
 
         <div id="section-4">
           <h2 className="red">
-            Ещё больше продуктов для&nbsp;детей и&nbsp;родителей можно заказать
+            Ещё больше продуктов для&nbsp;детей <Br for="desktop" />{" "}
+            и&nbsp;родителей можно заказать <Br for="desktop" />
             в&nbsp;нашем приложении
           </h2>
 
           <Promocode code="ДЕТСТВО" />
 
-          <p className="text-center red weight-500 size-16">
+          <p className="text-center red weight-500 size-16 mobile-only">
             Даёт скидку&nbsp;15% на&nbsp;товары бренда Самокат при заказе
             от&nbsp;1000&nbsp;₽
           </p>
 
-          <br />
           <ChooseSetButton />
+
+          <p className="text-center red weight-450 size-16 desktop-only discount">
+            Даёт скидку&nbsp;15% на&nbsp;товары бренда Самокат <br />
+            при заказе от&nbsp;1000&nbsp;₽
+          </p>
         </div>
 
         <footer>
@@ -135,7 +106,7 @@ export default function Home() {
             в&nbsp;сервисе &laquo;Достаточно хорошие родители&raquo;.
           </p>
           <div className="made-by">
-            Сделано в&nbsp;
+            Сделано&nbsp;в&nbsp;
             <a target="_blank" href="https://groznov.co/">
               GROZNOV
             </a>
