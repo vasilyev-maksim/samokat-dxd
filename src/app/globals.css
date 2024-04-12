@@ -23,6 +23,26 @@ body {
   overflow-x: hidden;
 }
 
+.desktop-only {
+  @media (max-width: 600px) {
+    display: none !important;
+  }
+
+  @media (min-width: 600px) {
+    display: block;
+  }
+}
+
+.mobile-only {
+  @media (max-width: 600px) {
+    display: block;
+  }
+
+  @media (min-width: 600px) {
+    display: none !important;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   main {
     overflow: unset;
@@ -391,22 +411,6 @@ footer {
   margin: 0 auto;
 }
 
-.desktop-only {
-  display: none;
-
-  @media (min-width: 600px) {
-    display: initial;
-  }
-}
-
-.mobile-only {
-  display: initial;
-
-  @media (min-width: 600px) {
-    display: none;
-  }
-}
-
 .heading {
   font-weight: 600;
   font-size: min(7vw, 48px);
@@ -566,12 +570,13 @@ footer {
     padding-top: 50px;
     padding-bottom: 25px;
     @media (min-width: 600px) {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+      /* border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; */
     }
   }
 
-  &.set {
+  &.set,
+  .set {
     padding-top: 20px;
 
     p {
@@ -596,9 +601,9 @@ footer {
     }
 
     @media (min-width: 600px) {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      padding-top: 50px;
+      /* border-top-left-radius: 0;
+      border-top-right-radius: 0; */
+      padding-top: 70px;
     }
   }
 }
