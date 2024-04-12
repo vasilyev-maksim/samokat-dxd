@@ -82,12 +82,24 @@ export const ChildModal: React.FC<{
           </div>
         </div>
         <div
-          className="modal-text mobile-only"
+          className="mobile-only modal-text "
           dangerouslySetInnerHTML={{ __html: child.description }}
         />
+
+        <div className="desktop-only set ">
+          <h2>Набор {decapitalize(set.name)}</h2>
+          <p dangerouslySetInnerHTML={{ __html: set.description }} />
+
+          <ProductsSlider setIndex={index} />
+
+          <Button label={set.button} onClick={() => sendEvent(set.eventKey)} />
+        </div>
       </div>
 
-      <div className="modal set" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="mobile-only modal set "
+        onClick={(e) => e.stopPropagation()}
+      >
         <h2>Набор {decapitalize(set.name)}</h2>
         <p dangerouslySetInnerHTML={{ __html: set.description }} />
 
