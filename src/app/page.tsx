@@ -14,8 +14,21 @@ export default function Home() {
       <Script src={url("/analytics.js")} />
       <Script src="https://player.vimeo.com/api/player.js" />
       <main>
-        <div className="site-header flex-centered">
-          <img alt="logo" src={url("./logo.svg")} />
+        <div className="site-header">
+          <div className="samokat flex-centered">
+            <a
+              target="_blank"
+              href="https://samokat.ru/?utm_source=google_gmb&utm_medium=cpc&utm_campaign=gmb_smkt_google_search_static_brand&utm_content=brand-delivery_154307442362|target_самокат доставка|format_search|ar_brand&utm_term=cid_20490534643|gid_154307442362|adid_685300709241|tid_kwd-298615479801|kw_самокат доставка|mtype_b|d_c|5155271087259116539&gad_source=1&gclid=CjwKCAjwt-OwBhBnEiwAgwzrUkI0OEmNltcenrsdWXK4cNyICiNrOHyIvJzN9xrpe74baMCUXp5eRRoCnKIQAvD_BwE"
+            >
+              <img alt="logo" src={url("./samokat_logo.svg")} />
+            </a>
+          </div>
+          <div className="separator"></div>
+          <div className="dxd">
+            <a target="_blank" href=" https://goodenoughparents.ru/">
+              <img alt="logo" src={url("./dxd_logo.svg")} />
+            </a>
+          </div>
         </div>
         <div id="section-0">
           <img alt={"children"} />

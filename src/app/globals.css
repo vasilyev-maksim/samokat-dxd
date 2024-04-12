@@ -60,9 +60,15 @@ body {
 
 .site-header {
   padding-top: 24px;
+  margin: 0 auto;
+  width: 220px;
+  display: flex;
+  justify-content: center;
 
-  img {
-    width: 220px;
+  .separator {
+    border-left: 1px solid rgba(64, 64, 64, 1);
+    width: 1px;
+    margin: 0 15px;
   }
 }
 
