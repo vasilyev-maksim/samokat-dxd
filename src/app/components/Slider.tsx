@@ -10,14 +10,14 @@ export function Slider(props: {
   className?: string;
 }) {
   return (
-    <a className={"slider " + props.className} href={config.appLink}>
+    <div className={"slider " + props.className}>
       {props.items.map(({ name, img }, index) => (
-        <div className="slider-item" key={index}>
+        <a href={config.appLink} className="slider-item" key={index}>
           <img src={url(img)} />
           <br />
           <div dangerouslySetInnerHTML={{ __html: name }} />
-        </div>
+        </a>
       ))}
-    </a>
+    </div>
   );
 }
