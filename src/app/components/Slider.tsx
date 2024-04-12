@@ -1,5 +1,6 @@
 import * as React from "react";
 import { url } from "../utils";
+import config from "../config.json";
 
 export function Slider(props: {
   items: {
@@ -9,7 +10,7 @@ export function Slider(props: {
   className?: string;
 }) {
   return (
-    <div className={"slider " + props.className}>
+    <a className={"slider " + props.className} href={config.appLink}>
       {props.items.map(({ name, img }, index) => (
         <div className="slider-item" key={index}>
           <img src={url(img)} />
@@ -17,6 +18,6 @@ export function Slider(props: {
           <div dangerouslySetInnerHTML={{ __html: name }} />
         </div>
       ))}
-    </div>
+    </a>
   );
 }

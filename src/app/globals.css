@@ -327,8 +327,10 @@ footer {
 }
 
 .slider-item {
+  display: block;
   min-width: 35%;
   line-height: 20px;
+  cursor: pointer;
 
   @media (min-width: 600px) {
     min-width: calc((100% - 48px) / 5);
