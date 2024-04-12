@@ -621,6 +621,11 @@ footer {
   position: absolute;
   right: 20px;
   bottom: 16px;
+
+  @media (min-width: 600px) {
+    left: 20px;
+    right: unset;
+  }
 }
 
 .modal-text {
@@ -714,97 +719,3 @@ footer {
   width: 100%;
   pointer-events: none;
 }
-
-/* @media only screen and (min-width: 600px) {
-  .cookies-toast {
-    width: 632px;
-    padding: 18px;
-    margin: 24px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-  }
-
-  .cookies-toast p {
-    font-size: 14px;
-  }
-
-  .cookies-toast button {
-    padding: 16px 40px;
-    margin-top: 0;
-    width: unset;
-    transition: 200ms all;
-  }
-
-  .cookies-toast button:hover {
-    background-color: #ff5378;
-  }
-
-  .cookies-toast button:active {
-    background-color: #ee2852;
-  }
-
-  .bottom-sticked-block {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-  }
-
-  .promocode {
-    margin: 30px auto;
-    padding: 19px 20px;
-    border-radius: 30px;
-    color: #383838;
-    width: 342px;
-    font-size: 25px;
-  }
-
-  .promocode img {
-    width: 31px;
-    margin-left: 16px;
-  }
-
-  .heading {
-    font-size: 24px;
-    margin-bottom: 26px;
-  }
-
-  .link-button-wrapper a {
-    font-size: 20px !important;
-    padding: 19px 45px;
-  }
-
-  .site-header {
-    padding-top: 33px;
-  }
-
-  .made-by {
-    font-size: 15px !important;
-  }
-
-  .promoblock {
-    font-size: 20px;
-    width: 470px;
-    max-width: 470px;
-  }
-
-  .desktop-only {
-    display: initial;
-  }
-
-  .mobile-only {
-    display: none;
-  }
-
-  .link-button {
-    padding: 16px 45px;
-    font-size: 20px;
-    line-height: 25px;
-  }
-
-  .link-button-wrapper {
-    margin-top: 30px !important;
-  }
-} */
