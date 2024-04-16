@@ -41,7 +41,7 @@ export const ChildModal: React.FC<{
             <div dangerouslySetInnerHTML={{ __html: child.occupation }} />
             <br />
             <div className="semi-bold">Профессиональный стаж: </div>
-            {child.age} лет
+            {child.age}
             <div
               className="modal-text"
               dangerouslySetInnerHTML={{ __html: child.description }}
