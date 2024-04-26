@@ -12,3 +12,7 @@ export function sendEvent(key: string) {
     event_action: key,
   });
 }
+
+export function range(length: number, stratFromZero = true) {
+  return Array.from({ length }, (_, i) => i + (stratFromZero ? 0 : 1));
+}
