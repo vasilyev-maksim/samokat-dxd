@@ -12,7 +12,7 @@ export default function Backstage() {
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const photoUrl = useMemo(() => {
     return activeChildIndex > -1 && activeIndex > -1
-      ? url(`/backstage/${activeChildIndex + 1}/${activeIndex}.JPG`)
+      ? url(`/backstage_photos/${activeChildIndex + 1}/${activeIndex}.JPG`)
       : undefined;
   }, [activeChildIndex, activeIndex]);
   const setActiveIndexes = (childIndex: number, photoIndex: number) => {
