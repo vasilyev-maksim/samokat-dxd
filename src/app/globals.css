@@ -841,6 +841,8 @@ footer {
   .center {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .arrow-btn {
