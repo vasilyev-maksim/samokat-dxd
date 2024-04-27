@@ -78,6 +78,9 @@ export const ChildModal: React.FC<{
           <ProductsSlider setIndex={index} />
 
           <Button label={set.button} onClick={() => sendEvent(set.eventKey)} />
+          <div className="backstage-link-block">
+            <BackstageLink childAnchorIndex={index} />
+          </div>
         </div>
       </div>
 
