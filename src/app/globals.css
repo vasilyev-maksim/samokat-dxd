@@ -809,7 +809,7 @@ footer {
   img {
     max-height: 100%;
     border-radius: 25px;
-    /* width: 100%; */
+    width: 100%;
   }
 
   .modal-body {
@@ -878,4 +878,11 @@ footer {
     align-items: center;
     margin-top: 20px;
   }
+}
+
+.backstage-link-block {
+  color: rgba(255, 51, 95, 1);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
 }

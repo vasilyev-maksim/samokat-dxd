@@ -84,7 +84,8 @@ export default function RootLayout({
               <a target="_blank" href="https://groznov.co/">
                 GROZNOV
               </a>
-              ® <BackstageLink />
+              ® &nbsp; &nbsp; &nbsp;
+              <BackstageLink />
             </div>
           </footer>
           <div className="bottom-sticked-block">

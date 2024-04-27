@@ -6,6 +6,7 @@ import { ProductsSlider } from "./ProductsSlider";
 import { Button } from "./Button";
 import { VideoPlayButton } from "./VideoPlayButton";
 import { sendEvent, url } from "../utils";
+import { BackstageLink } from "./BackstageLink";
 
 function decapitalize(str: string) {
   return str.charAt(0).toLowerCase() + str.slice(1);
@@ -86,10 +87,12 @@ export const ChildModal: React.FC<{
       >
         <h2>Набор {decapitalize(set.name)}</h2>
         <p dangerouslySetInnerHTML={{ __html: set.description }} />
-
         <ProductsSlider setIndex={index} />
-
         <Button label={set.button} onClick={() => sendEvent(set.eventKey)} />
+        <br />
+        <div className="backstage-link-block">
+          <BackstageLink childAnchorIndex={index} />
+        </div>
       </div>
     </div>
   );

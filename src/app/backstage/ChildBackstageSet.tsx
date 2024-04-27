@@ -11,7 +11,7 @@ export function ChildBackstageSet(props: {
 
   return (
     photos.length > 0 && (
-      <div className="child-backstage-set">
+      <div className="child-backstage-set" id={props.index + 1 + ""}>
         <h2>{child.name}</h2>
 
         <div className="grid">
@@ -20,7 +20,9 @@ export function ChildBackstageSet(props: {
               style={{ animationDelay: `${photoIndex * 0.05}s` }}
               onClick={() => props.onClick(props.index, photoIndex)}
               alt={child.name + " backstage photo " + photoIndex}
-              src={url(`/backstage_photos/${props.index + 1}/${photoIndex}p.JPG`)}
+              src={url(
+                `/backstage_photos/${props.index + 1}/${photoIndex}p.JPG`
+              )}
               key={photoIndex}
             />
           ))}
