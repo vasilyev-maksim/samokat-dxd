@@ -10,7 +10,7 @@ export function BackstageLink(props: { childAnchorIndex?: number }) {
       <a
         target="_blank"
         href={
-          "/backstage" +
+          "/backstage.html" +
           (props.childAnchorIndex !== undefined
             ? "#" + (props.childAnchorIndex + 1)
             : "")
