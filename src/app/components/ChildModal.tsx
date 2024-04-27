@@ -48,22 +48,6 @@ export const ChildModal: React.FC<{
             />
           </div>
           <div className="modal-video-wrapper">
-            {/* <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-            <iframe
-              src={`https://player.vimeo.com/video/${child.vimeoVideoId}?h=66f4c80b79&title=0&byline=0&portrait=0`}
-              style={{
-                position: "absolute",
-                borderRadius: 10,
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-              }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div> */}
             <video
               ref={video}
               className="modal-video"

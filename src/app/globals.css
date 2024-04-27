@@ -386,15 +386,17 @@ footer {
 .products-slider {
   font-size: 12px;
   margin-bottom: 20px;
-  width: calc(100% + 25px);
+  width: calc(100% + 24px);
   position: relative;
   left: -12px;
   z-index: 4000;
+  padding: 0 10px;
 
   @media (min-width: 600px) {
     width: 100%;
     left: 0;
     margin-bottom: 60px;
+    padding: 0;
   }
 
   img {
@@ -807,6 +809,7 @@ footer {
   img {
     max-height: 100%;
     border-radius: 25px;
+    /* width: 100%; */
   }
 
   .modal-body {
