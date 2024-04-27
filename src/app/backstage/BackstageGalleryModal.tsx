@@ -26,7 +26,7 @@ export function BackstageGalleryModal(props: {
     !!props.photoUrl && (
       <div className="modal-bg backstage-modal-bg" onClick={props.onClose}>
         <div className="modal-body" onClick={(e) => e.stopPropagation()}>
-          <div className="left">
+          <div className="left desktop-only">
             <div
               className={
                 "arrow-btn flex-centered " + (props.hasPrev ? "" : "disabled")
@@ -40,8 +40,37 @@ export function BackstageGalleryModal(props: {
           </div>
           <div className="center">
             <img src={props.photoUrl} />
+            <div className="mobile-only controls-mobile">
+              <div
+                className={
+                  "arrow-btn flex-centered " + (props.hasPrev ? "" : "disabled")
+                }
+                onClick={() => {
+                  if (props.hasPrev) props.onNav(-1);
+                }}
+              >
+                <img src="/arrow-left.svg"></img>
+              </div>
+              <div className="close-btn-block">
+                <img
+                  src="/cross-white.svg"
+                  alt="close"
+                  onClick={props.onClose}
+                />
+              </div>
+              <div
+                className={
+                  "arrow-btn flex-centered " + (props.hasNext ? "" : "disabled")
+                }
+                onClick={() => {
+                  if (props.hasNext) props.onNav(1);
+                }}
+              >
+                <img src="/arrow-right.svg"></img>
+              </div>
+            </div>
           </div>
-          <div className="right">
+          <div className="right desktop-only">
             <div className="close-btn-block">
               <img src="/cross-white.svg" alt="close" onClick={props.onClose} />
             </div>
